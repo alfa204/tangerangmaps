@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-public class tangerangmaps extends TabActivity {
+public class TangerangMaps extends TabActivity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -17,23 +17,39 @@ public class tangerangmaps extends TabActivity {
         setContentView(R.layout.main);
         
         //Menginisalisasi TAB
-        TabHost host= (TabHost) findViewById(R.id.tabs);
+        TabHost host= getTabHost();
         TabHost.TabSpec tabSpec;
         Intent intent; //yang digunakan untuk memanggil tab lainnya
         
-        intent = new Intent().setClass(this, map.class); //untuk inisialisasi tab pertama kali di jalankan
-        tabSpec = host.newTabSpec("maptangerang")
+        intent = new Intent().setClass(this, Dashboard.class); //untuk inisialisasi tab pertama kali di jalankan
+        tabSpec = host.newTabSpec("dasboard")
         		.setIndicator(
-        				new Tampilan(this, R.drawable.icon, R.string.tab_map))
+        				new Tampilan(this, R.drawable.dashboard, R.string.tab_dashboard))
         				.setContent(intent);
         host.addTab(tabSpec);
         
+        //tab Peta
+        intent = new Intent().setClass(this, Map.class);
+        tabSpec= host.newTabSpec("map")
+        		.setIndicator(
+        				new Tampilan(this, R.drawable.map, R.string.tab_map))
+        				.setContent(intent);
+        host.addTab(tabSpec);
+       
         //tab Augmented Reality
-        
-        tabSpec= host.newTabSpec("AugmentedReality")
+        intent = new Intent().setClass(this, AugmentedReality.class);
+        tabSpec= host.newTabSpec("augmentedreality")
         	.setIndicator(
-        		new Tampilan(this, R.drawable.icon, R.string.tab_ar))
+        		new Tampilan(this, R.drawable.ar, R.string.tab_ar))
         		.setContent(intent);
+        host.addTab(tabSpec);
+        
+        //tab Tambah lokasi
+        intent = new Intent().setClass(this, AddPOI.class);
+        tabSpec=host.newTabSpec("addpoi")
+        		.setIndicator(
+        				new Tampilan(this, R.drawable.addlocation, R.string.tab_addlocation))
+        				.setContent(intent);
         host.addTab(tabSpec);
     }
     
