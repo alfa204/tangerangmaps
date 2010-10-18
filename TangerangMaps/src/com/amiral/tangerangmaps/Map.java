@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.google.android.maps.MapActivity;
 
-public class map extends Activity {
+public class Map extends Activity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
