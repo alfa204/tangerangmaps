@@ -6,4 +6,38 @@
     <string name="tab_ar">Camera</string>
     <string name="tab_dashboard">Categories</string>
     <string name="tab_addlocation">Add POI</string>
+    
+    <!-- for addlocation layout -->
+    <string name="nama">Nama: *</string>
+    <string name="kategori">Kategori: *</string>
+    <string name="alamat">Alamat: *</string>
+    <string name="lokasi">Lokasi: *</string>
+    <string name="kecamatan">Kecamatan: </string>
+    <string name="kelurahan">Kelurahan: </string>
+    <string name="telp">Telepon: </string>
+    <string name="fax">Fax: </string>
+    <string name="email">EMail: </string>
+    <string name="website">Website: </string>
+    <string name="keterangan">Keterangan: </string>
+    <string name="note">(*) Wajib di isi</string>
+    <string name="ceklokasi">Cek Lokasi</string>
+    <string name="lbl_tombol">Tambah</string>
+    
+    <string name="pilih_list_kategori">Pilih Kategori</string>
+    <string-array name="list_kategori">
+    	<item>Apotik</item>
+    	<item>Bank</item>
+    	<item>Sekolah</item>
+    	<item>Rumah Sakit</item>
+    </string-array>
+    
+    <!-- For Camera Layar -->
+     <string name="layer_name">tangerangmaps</string>
+    
+    <string name="layar_not_available">Untuk menjalankan fitur ini, anda harus menginstall Layar terlebih dahulu.</string>
+    <string name="layar_market">Install dari Android Market</string>
+    <string name="layar_cancel">Cancel</string>
+    
+    <!-- For Map Activity -->
+    <string name="api_key">0AHAjGk0fl23lBazYV4q-6YMXESM2yEzEJZRIEw</string>
 </resources>

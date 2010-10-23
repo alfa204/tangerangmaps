@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="textcolor">#063857</color>
+	<color name="peringatan">#FF0000</color>
+	<color name="background_utama">#598fb9</color>
+	<color name="garis">#FFFFFF</color>
+</resources>

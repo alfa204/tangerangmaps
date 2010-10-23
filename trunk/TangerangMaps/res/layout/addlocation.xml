@@ -1,11 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
   xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="wrap_content"
-  android:layout_height="wrap_content">
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/background_utama">
   
-  <TextView
+  <LinearLayout
+  	android:orientation="vertical"
   	android:layout_width="fill_parent"
-  	android:layout_height="wrap_content"
-  	android:text="disini tampil menu add bagi user"/>
-</LinearLayout>
+  	android:layout_height="wrap_content">
+  	
+	  	<TableLayout
+	  		android:layout_width="fill_parent"
+	  		android:layout_height="fill_parent"
+	  		android:layout_marginLeft="20px"
+	  		android:layout_marginTop="10px">
+	  		<TableRow>
+	  			<TextView
+				  	android:layout_width="100px"
+				  	android:layout_height="wrap_content"
+				  	android:textStyle="bold"
+				  	android:textColor="@color/textcolor"
+				  	android:text="@string/nama"/>
+			  	<EditText
+				  	android:id="@+id/nama"
+				  	android:layout_width="170px"
+				  	android:layout_height="wrap_content"
+				  	android:capitalize="words"
+				  	android:singleLine="true"
+				  	android:hint="@string/nama"
+				  />
+	  		</TableRow>
+	  		
+	  		<TableRow>
+		  		<TextView
+				  	android:layout_width="fill_parent"
+				  	android:layout_height="wrap_content"
+				  	android:textStyle="bold"
+				  	android:textColor="@color/textcolor"
+				  	android:text="@string/alamat"/>
+				<EditText
+				  	android:id="@+id/alamat"
+				  	android:layout_width="170px"
+				  	android:layout_height="wrap_content"
+				  	android:capitalize="sentences"
+				  	android:singleLine="false"
+				  	android:hint="@string/alamat"/>
+	  		</TableRow>
+	  		
+	  		<TableRow>
+	  			<TextView
+	  				android:layout_width="fill_parent"
+	  				android:layout_height="wrap_content"
+	  				android:textStyle="bold"
+	  				android:textColor="@color/textcolor"
+	  				android:text="@string/lokasi"/>
+	  			<TableLayout
+	  				android:layout_width="fill_parent"
+	  				android:layout_height="wrap_content">
+	  				
+	  				<TableRow>
+	  				<ImageButton
+	  				android:id="@+id/cek_peta"
+	  				android:layout_width="wrap_content"
+	  				android:layout_height="wrap_content"
+	  				android:src="@drawable/map"
+	  				android:onClick="lihatPeta"/>
+		  				<TableLayout
+		  				android:layout_width="wrap_content"
+		  				android:layout_height="wrap_content">
+		  					<TableRow>
+		  					<TextView
+			  				android:id="@+id/label_longitude"
+			  				android:layout_width="wrap_content"
+			  				android:layout_height="wrap_content"
+			  				android:textColor="@color/textcolor"
+			  				android:text="long: "/>
+		  					</TableRow>
+				  			<TableRow>
+				  			<TextView
+			  				android:id="@+id/label_longitude"
+			  				android:layout_width="wrap_content"
+			  				android:layout_height="wrap_content"
+			  				android:textColor="@color/textcolor"
+			  				android:text="lat: "/>
+				  			</TableRow>
+ 				
+		  				</TableLayout>
+	  				</TableRow>	
+	  			</TableLayout>
+	  			
+	  		</TableRow>	
+	  		<TableRow>
+		  		<TextView
+				  	android:layout_width="fill_parent"
+				  	android:layout_height="wrap_content"
+				  	android:textStyle="bold"
+				  	android:textColor="@color/textcolor"
+				  	android:text="@string/kategori"/>
+				<Spinner
+				  	android:id="@+id/kategori"
+				  	android:layout_width="170px"
+				  	android:layout_height="wrap_content"
+				  	android:prompt="@string/pilih_list_kategori"
+				  	/>
+	  		</TableRow>
+	  		
+	  		<TableRow>
+		  		<TextView
+				  	android:layout_width="fill_parent"
+				  	android:layout_height="wrap_content"
+				  	android:textStyle="bold"
+				  	android:textColor="@color/textcolor"
+				  	android:text="@string/kelurahan"/>
+				<EditText
+				  	android:id="@+id/kelurahan"
+				  	android:layout_width="170px"
+				  	android:layout_height="wrap_content"
+				  	android:capitalize="words"
+				  	android:singleLine="true"
+				  	android:hint="@string/kelurahan"/>
+	  		</TableRow>
+	  		
+	  		<TableRow>
+		  		<TextView
+				  	android:layout_width="fill_parent"
+				  	android:layout_height="wrap_content"
+				  	android:textStyle="bold"
+				  	android:textColor="@color/textcolor"
+				  	android:text="@string/kecamatan"/>
+				  <EditText
+				  	android:id="@+id/kecamatan"
+				  	android:layout_width="170px"
+				  	android:layout_height="wrap_content"
+				  	android:singleLine="true"
+				  	android:hint="@string/kecamatan"/>
+	  		</TableRow>
+	  		
+	  		<TableRow>
+		  		<TextView
+				  	android:layout_width="fill_parent"
+				  	android:layout_height="wrap_content"
+				  	android:textStyle="bold"
+				  	android:textColor="@color/textcolor"
+				  	android:text="@string/telp"/>
+				<EditText
+				  	android:id="@+id/telp"
+				  	android:layout_width="170px"
+				  	android:layout_height="wrap_content"
+				  	android:phoneNumber="true"
+				  	android:singleLine="true"
+				  	android:hint="@string/telp"/>
+	  		</TableRow>
+	  		
+	  		<TableRow>
+		  		<TextView
+				  	android:layout_width="fill_parent"
+				  	android:layout_height="wrap_content"
+				  	android:textStyle="bold"
+				  	android:textColor="@color/textcolor"
+				  	android:text="@string/email"/>
+				<EditText
+				  	android:id="@+id/email"
+				  	android:layout_width="170px"
+				  	android:layout_height="wrap_content"
+				  	android:singleLine="true"
+				  	android:inputType="textEmailAddress"
+				  	android:autoLink="email"
+				  	android:hint="@string/email"/>
+	  		</TableRow>
+	  		
+	  		<TableRow>
+		  		<TextView
+				  	android:layout_width="fill_parent"
+				  	android:layout_height="wrap_content"
+				  	android:textStyle="bold"
+				  	android:textColor="@color/textcolor"
+				  	android:text="@string/website"/>
+				<EditText
+				  	android:id="@+id/website"
+				  	android:layout_width="170px"
+				  	android:layout_height="wrap_content"
+				  	android:singleLine="true"
+				  	android:inputType="textUri"
+				  	android:autoLink="web"
+				  	android:hint="@string/website"/>
+	  		</TableRow>
+	  		
+	  		<TableRow>
+		  		<TextView
+				  	android:layout_width="fill_parent"
+				  	android:layout_height="wrap_content"
+				  	android:textStyle="bold"
+				  	android:textColor="@color/textcolor"
+				  	android:text="@string/keterangan"/>
+				<EditText
+				  	android:id="@+id/keterangan"
+				  	android:layout_width="170px"
+				  	android:layout_height="wrap_content"
+				  	android:capitalize="sentences"
+				  	android:singleLine="false"
+				  	android:hint="@string/keterangan"/>
+	  		</TableRow>
+	  	</TableLayout>
+	  	<TextView
+	  		android:layout_width="fill_parent"
+	  		android:layout_height="wrap_content"
+	  		android:textColor="@color/peringatan"
+	  		android:textStyle="italic"
+	  		android:text="@string/note"/>		  
+	  	<Button
+	  		android:id="@+id/btn_addlokasi"
+	  		android:layout_width="150px"
+	  		android:layout_height="wrap_content"
+	  		android:padding="50dp"
+	  		android:gravity="center"
+	  		android:layout_marginLeft="100px"
+	  		android:text="@string/lbl_tombol"
+	  		android:onClick="tambahLokasi"/>
+	</LinearLayout>
+</ScrollView>
