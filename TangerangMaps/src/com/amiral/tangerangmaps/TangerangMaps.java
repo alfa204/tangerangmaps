@@ -24,12 +24,12 @@ public class TangerangMaps extends TabActivity {
         intent = new Intent().setClass(this, Dashboard.class); //untuk inisialisasi tab pertama kali di jalankan
         tabSpec = host.newTabSpec("dasboard")
         		.setIndicator(
-        				new Tampilan(this, R.drawable.dashboard, R.string.tab_dashboard))
+        				new Tampilan(this, R.drawable.kategori, R.string.tab_dashboard))
         				.setContent(intent);
         host.addTab(tabSpec);
         
         //tab Peta
-        intent = new Intent().setClass(this, Map.class);
+        intent = new Intent().setClass(this, MapTangerang.class);
         tabSpec= host.newTabSpec("map")
         		.setIndicator(
         				new Tampilan(this, R.drawable.map, R.string.tab_map))
@@ -40,7 +40,7 @@ public class TangerangMaps extends TabActivity {
         intent = new Intent().setClass(this, AugmentedReality.class);
         tabSpec= host.newTabSpec("augmentedreality")
         	.setIndicator(
-        		new Tampilan(this, R.drawable.ar, R.string.tab_ar))
+        		new Tampilan(this, R.drawable.camera, R.string.tab_ar))
         		.setContent(intent);
         host.addTab(tabSpec);
         
@@ -48,7 +48,7 @@ public class TangerangMaps extends TabActivity {
         intent = new Intent().setClass(this, AddPOI.class);
         tabSpec=host.newTabSpec("addpoi")
         		.setIndicator(
-        				new Tampilan(this, R.drawable.addlocation, R.string.tab_addlocation))
+        				new Tampilan(this, R.drawable.tambah, R.string.tab_addlocation))
         				.setContent(intent);
         host.addTab(tabSpec);
     }
