@@ -32,106 +32,115 @@
 			android:layout_height="wrap_content">
 			<TableRow>
 			<TextView
-				android:text="Apotik"
+				android:textColor="@color/textcolor"
+				android:layout_gravity="center"
+				android:textSize="12sp"
+				android:text="@string/apotik"/>
+			<TextView
+				android:text="@string/puskesmas"
 				android:textColor="@color/textcolor"
 				android:layout_gravity="center"
 				android:textSize="12sp"/>
 			<TextView
-				android:text="Bank"
+				android:text="@string/rumah_sakit"
+				android:textColor="@color/textcolor"
+				android:layout_gravity="center"
+				android:textSize="12sp"/>
+			</TableRow>
+			<TableRow>
+			<Button
+				android:id="@+id/kategori_apotik"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/contoh1"
+				android:onClick="pilihKategori"/>
+			<Button
+				android:id="@+id/kategori_puskesmas"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/contoh2"
+				android:onClick="pilihKategori"/>
+			<ImageButton
+				android:id="@+id/kategori_rumah_sakit"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/iconrs"
+				android:onClick="pilihKategori"/>
+			</TableRow>
+			<TableRow>
+			<TextView
+				android:text="@string/kecamatan"
 				android:textColor="@color/textcolor"
 				android:layout_gravity="center"
 				android:textSize="12sp"/>
 			<TextView
-				android:text="Hotel"
+				android:text="@string/kelurahan"
+				android:textColor="@color/textcolor"
+				android:layout_gravity="center"
+				android:textSize="12sp"/>
+			<TextView
+				android:text="@string/polisi"
 				android:textColor="@color/textcolor"
 				android:layout_gravity="center"
 				android:textSize="12sp"/>
 			</TableRow>
 			<TableRow>
 			<ImageButton
-				android:id="@+id/kategori_1"
+				android:id="@+id/kategori_kecamatan"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/icon_apotik"/>
+				android:src="@drawable/iconkecamatan"
+				android:onClick="pilihKategori"/>
 			<ImageButton
-				android:id="@+id/kategori_2"
+				android:id="@+id/kategori_kelurahan"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/icon_bank"/>
+				android:src="@drawable/iconkelurahan"
+				android:onClick="pilihKategori"/>
 			<ImageButton
-				android:id="@+id/kategori_3"
+				android:id="@+id/kategori_polisi"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/icon_hotel"/>
-			</TableRow>
-			<TableRow>
-			<TextView
-				android:text="Apotik"
-				android:textColor="@color/textcolor"
-				android:layout_gravity="center"
-				android:textSize="12sp"/>
-			<TextView
-				android:text="Bank"
-				android:textColor="@color/textcolor"
-				android:layout_gravity="center"
-				android:textSize="12sp"/>
-			<TextView
-				android:text="Hotel"
-				android:textColor="@color/textcolor"
-				android:layout_gravity="center"
-				android:textSize="12sp"/>
-			</TableRow>
-			<TableRow>
-			<ImageButton
-				android:id="@+id/kategori_1"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
-			<ImageButton
-				android:id="@+id/kategori_2"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
-			<ImageButton
-				android:id="@+id/kategori_3"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
+				android:src="@drawable/iconpolisi"
+				android:onClick="pilihKategori"/>
 			</TableRow>
 			
 			<TableRow>
 			<TextView
-				android:text="Apotik"
+				android:text="@string/bank"
 				android:textColor="@color/textcolor"
 				android:layout_gravity="center"
 				android:textSize="12sp"/>
 			<TextView
-				android:text="Bank"
+				android:text="@string/pos"
 				android:textColor="@color/textcolor"
 				android:layout_gravity="center"
 				android:textSize="12sp"/>
 			<TextView
-				android:text="Hotel"
+				android:text="@string/transportasi"
 				android:textColor="@color/textcolor"
 				android:layout_gravity="center"
 				android:textSize="12sp"/>
 			</TableRow>
 			<TableRow>
 			<ImageButton
-				android:id="@+id/kategori_1"
+				android:id="@+id/kategori_bank"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
+				android:src="@drawable/icon_bank"
+				android:onClick="pilihKategori"/>
 			<ImageButton
-				android:id="@+id/kategori_2"
+				android:id="@+id/kategori_pos"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
+				android:src="@drawable/iconpos"
+				android:onClick="pilihKategori"/>
 			<ImageButton
-				android:id="@+id/kategori_3"
+				android:id="@+id/kategori_transportasi"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
+				android:src="@drawable/icontransportasi"
+				android:onClick="pilihKategori"/>
 			</TableRow>
 		</TableLayout>
 		<TableLayout
@@ -139,105 +148,114 @@
 			android:layout_height="wrap_content">
 			<TableRow>
 			<TextView
-				android:text="Apotik"
+				android:text="@string/sd"
 				android:textColor="@color/textcolor"
 				android:layout_gravity="center"
 				android:textSize="12sp"/>
 			<TextView
-				android:text="Bank"
+				android:text="@string/smp"
 				android:textColor="@color/textcolor"
 				android:layout_gravity="center"
 				android:textSize="12sp"/>
 			<TextView
-				android:text="Hotel"
+				android:text="@string/sma"
 				android:textColor="@color/textcolor"
 				android:layout_gravity="center"
 				android:textSize="12sp"/>
 			</TableRow>
 			<TableRow>
 			<ImageButton
-				android:id="@+id/kategori_1"
+				android:id="@+id/kategori_sd"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
+				android:src="@drawable/iconsd"
+				android:onClick="pilihKategori"/>
 			<ImageButton
-				android:id="@+id/kategori_2"
+				android:id="@+id/kategori_smp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
+				android:src="@drawable/iconsmp"
+				android:onClick="pilihKategori"/>
 			<ImageButton
-				android:id="@+id/kategori_3"
+				android:id="@+id/kategori_sma"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
+				android:src="@drawable/iconsma"
+				android:onClick="pilihKategori"/>
 			</TableRow>
 			<TableRow>
 			<TextView
-				android:text="Apotik"
+				android:text="@string/universitas"
 				android:textColor="@color/textcolor"
 				android:layout_gravity="center"
 				android:textSize="12sp"/>
 			<TextView
-				android:text="Bank"
+				android:text="@string/swalayan"
 				android:textColor="@color/textcolor"
 				android:layout_gravity="center"
 				android:textSize="12sp"/>
 			<TextView
-				android:text="Hotel"
-				android:textColor="@color/textcolor"
-				android:layout_gravity="center"
-				android:textSize="12sp"/>
-			</TableRow>
-			<TableRow>
-			<ImageButton
-				android:id="@+id/kategori_1"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
-			<ImageButton
-				android:id="@+id/kategori_2"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
-			<ImageButton
-				android:id="@+id/kategori_3"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
-			</TableRow>
-			<TableRow>
-			<TextView
-				android:text="Apotik"
-				android:textColor="@color/textcolor"
-				android:layout_gravity="center"
-				android:textSize="12sp"/>
-			<TextView
-				android:text="Bank"
-				android:textColor="@color/textcolor"
-				android:layout_gravity="center"
-				android:textSize="12sp"/>
-			<TextView
-				android:text="Hotel"
+				android:text="@string/pasar"
 				android:textColor="@color/textcolor"
 				android:layout_gravity="center"
 				android:textSize="12sp"/>
 			</TableRow>
 			<TableRow>
 			<ImageButton
-				android:id="@+id/kategori_1"
+				android:id="@+id/kategori_universitas"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
+				android:src="@drawable/iconuniversitas"
+				android:onClick="pilihKategori"/>
 			<ImageButton
-				android:id="@+id/kategori_2"
+				android:id="@+id/kategori_swalayan"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
+				android:src="@drawable/iconswalayan"
+				android:onClick="pilihKategori"/>
 			<ImageButton
-				android:id="@+id/kategori_3"
+				android:id="@+id/kategori_pasar"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/icon_layar"/>
+				android:src="@drawable/iconpasar"
+				android:onClick="pilihKategori"/>
+			</TableRow>
+			<TableRow>
+			<TextView
+				android:text="@string/wisata"
+				android:textColor="@color/textcolor"
+				android:layout_gravity="center"
+				android:textSize="12sp"/>
+			<TextView
+				android:text="@string/hotel"
+				android:textColor="@color/textcolor"
+				android:layout_gravity="center"
+				android:textSize="12sp"/>
+			<TextView
+				android:text="@string/lain"
+				android:textColor="@color/textcolor"
+				android:layout_gravity="center"
+				android:textSize="12sp"/>
+			</TableRow>
+			<TableRow>
+			<ImageButton
+				android:id="@+id/kategori_wisata"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/iconwisata"
+				android:onClick="pilihKategori"/>
+			<ImageButton
+				android:id="@+id/kategori_hotel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/icon_hotel"
+				android:onClick="pilihKategori"/>
+			<ImageButton
+				android:id="@+id/kategori_lain"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/iconlainlain"
+				android:onClick="pilihKategori"/>
 			</TableRow>
 		</TableLayout>
 		</LinearLayout>

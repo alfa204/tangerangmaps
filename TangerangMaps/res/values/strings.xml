@@ -7,13 +7,33 @@
     <string name="tab_dashboard">Categories</string>
     <string name="tab_addlocation">Add POI</string>
     
+    <!-- for dasboard -->
+    <string name="apotik">Apotik</string>
+    <string name="bank">Bank</string>
+    <string name="hotel">Hotel</string>
+    <string name="kecamatan">Kecamatan</string>
+    <string name="kelurahan">Kelurahan</string>
+    <string name="lain">Lain-lain</string>
+    <string name="pasar">Pasar</string>
+    <string name="polisi">Polisi</string>
+    <string name="pos">Kantor Pos</string>
+    <string name="puskesmas">Puskesmas</string>
+    <string name="rumah_sakit">Rumah Sakit</string>
+    <string name="sd">SD</string>
+    <string name="smp">SMP</string>
+    <string name="sma">SMA</string>
+    <string name="universitas">Universitas</string>
+    <string name="swalayan">Swalayan</string>
+    <string name="transportasi">Transportasi</string>
+    <string name="wisata">Wisata</string>
+    
     <!-- for addlocation layout -->
     <string name="nama">Nama: *</string>
     <string name="kategori">Kategori: *</string>
     <string name="alamat">Alamat: *</string>
     <string name="lokasi">Lokasi: *</string>
-    <string name="kecamatan">Kecamatan: </string>
-    <string name="kelurahan">Kelurahan: </string>
+    <string name="txtkecamatan">Kecamatan: </string>
+    <string name="txtkelurahan">Kelurahan: </string>
     <string name="telp">Telepon: </string>
     <string name="fax">Fax: </string>
     <string name="email">EMail: </string>
