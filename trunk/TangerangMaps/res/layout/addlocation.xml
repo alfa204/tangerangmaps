@@ -72,11 +72,11 @@
 		  				android:layout_height="wrap_content">
 		  					<TableRow>
 		  					<TextView
-			  				android:id="@+id/label_longitude"
+			  				android:id="@+id/label_latitude"
 			  				android:layout_width="wrap_content"
 			  				android:layout_height="wrap_content"
 			  				android:textColor="@color/textcolor"
-			  				android:text="long: "/>
+			  				android:text="lat: "/>
 		  					</TableRow>
 				  			<TableRow>
 				  			<TextView
@@ -84,7 +84,7 @@
 			  				android:layout_width="wrap_content"
 			  				android:layout_height="wrap_content"
 			  				android:textColor="@color/textcolor"
-			  				android:text="lat: "/>
+			  				android:text="long: "/>
 				  			</TableRow>
  				
 		  				</TableLayout>
@@ -120,7 +120,7 @@
 				  	android:layout_height="wrap_content"
 				  	android:capitalize="words"
 				  	android:singleLine="true"
-				  	android:hint="@string/kelurahan"/>
+				  	android:hint="@string/txtkelurahan"/>
 	  		</TableRow>
 	  		
 	  		<TableRow>
@@ -129,7 +129,7 @@
 				  	android:layout_height="wrap_content"
 				  	android:textStyle="bold"
 				  	android:textColor="@color/textcolor"
-				  	android:text="@string/kecamatan"/>
+				  	android:text="@string/txtkecamatan"/>
 				  <EditText
 				  	android:id="@+id/kecamatan"
 				  	android:layout_width="170px"
