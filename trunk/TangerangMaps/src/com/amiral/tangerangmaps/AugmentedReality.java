@@ -1,5 +1,7 @@
 package com.amiral.tangerangmaps;
 
+import com.amiral.tangerangmaps.util.LauncherLayar;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

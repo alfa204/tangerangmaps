@@ -4,26 +4,26 @@
 	android:layout_height="fill_parent"
 	android:layout_width="fill_parent">
 
-	<LinearLayout
+	<RelativeLayout
 		android:orientation="vertical"
 		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-		android:padding="3dp">
-		
+		android:layout_height="fill_parent">
 		<FrameLayout
 			android:id="@android:id/tabcontent"
 			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:layout_weight="1"/>
+			android:layout_height="fill_parent"
+			android:layout_weight="1"
+			android:background="@color/lightblack"/>
 			
 		<TabWidget
 			android:id="@android:id/tabs"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:background="#758EA1"
+			android:layout_alignBottom="@android:id/tabcontent"
+			android:background="@drawable/shapecustomtab"
 			/>
 	
-	</LinearLayout>	
+	</RelativeLayout>	
 </TabHost>
 
 
