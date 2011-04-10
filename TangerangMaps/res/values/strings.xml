@@ -6,6 +6,7 @@
     <string name="tab_ar">Camera</string>
     <string name="tab_dashboard">Categories</string>
     <string name="tab_addlocation">Add POI</string>
+    <string name="tab_news">News</string>
     
     <!-- for dasboard -->
     <string name="apotik">Apotik</string>

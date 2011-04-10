@@ -1,6 +1,8 @@
-package com.amiral.tangerangmaps;
+package com.amiral.tangerangmaps.util;
 
 import java.util.List;
+
+import com.amiral.tangerangmaps.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
