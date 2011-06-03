@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:background="@color/white">
+   <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="6dip">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/btnApotik"
+                style="@style/HomeButton"
+                android:onClick="eventHealth"
+                android:text="@string/apotik"
+                android:drawableTop="@drawable/icon_apotik"/>
+            <Button android:id="@+id/btnPuskesmas"
+                style="@style/HomeButton"
+                android:onClick="eventHealth"
+                android:text="@string/puskesmas"
+                android:drawableTop="@drawable/iconpuskesmas"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/btnRS"
+                style="@style/HomeButton"
+                android:onClick="eventHealth"
+                android:text="@string/rumah_sakit"
+                android:drawableTop="@drawable/iconrs"/>
+           	<Button android:id="@+id/btnRB"
+                style="@style/HomeButton"
+                android:onClick="eventHealth"
+                android:text="@string/rumah_bersalin"/>
+        </LinearLayout>
+   </LinearLayout>
+</LinearLayout>

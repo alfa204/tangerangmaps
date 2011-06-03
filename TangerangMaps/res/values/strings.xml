@@ -20,13 +20,24 @@
     <string name="pos">Kantor Pos</string>
     <string name="puskesmas">Puskesmas</string>
     <string name="rumah_sakit">Rumah Sakit</string>
+    <string name="rumah_bersalin">Rumah Bersalin</string>
     <string name="sd">SD</string>
     <string name="smp">SMP</string>
     <string name="sma">SMA</string>
+    <string name="tk">TK</string>
     <string name="universitas">Universitas</string>
     <string name="swalayan">Swalayan</string>
     <string name="transportasi">Transportasi</string>
     <string name="wisata">Wisata</string>
+    <string name="perumahan">Perumahan</string>
+    <string name="wisma">Wisma</string>
+    <string name="apartement">Apartement</string>
+    <string name="instansi">Instansi Pemerintah</string>
+    <string name="others">Others</string>
+    <string name="spbu">SPBU</string>
+    <string name="terminal">Terminal</string>
+    <string name="stasiun">Stasiun</string>
+    <string name="bandara">Bandar Udara</string>
     
     <!-- for addlocation layout -->
     <string name="nama">Nama: *</string>
@@ -61,4 +72,29 @@
     
     <!-- For Map Activity -->
     <string name="api_key">0AHAjGk0fl23lBazYV4q-6YMXESM2yEzEJZRIEw</string>
+    
+    <!-- For Home -->
+    <string name="aboutTangerang">About Tangerang</string>
+    <string name="categories">Categories</string>
+    <string name="transportRoute">Transport Route</string>
+    <string name="liveView">Live View</string>
+    <string name="keyTelephone">Key Telephone</string>
+    
+    <!-- For Categories -->
+    <string name="gov">Goverment</string>
+    <string name="street">Street</string>
+    <string name="edu">Education</string>
+    <string name="health">Health</string>
+    <string name="living">Living</string>
+    <string name="transportation">Transportation</string>
+    <string name="bank">Bank n ATM</string>
+    <string name="shopping">Shopping</string>
+    <string name="culinary">Culinary</string>
+    <string name="sport">Sport</string>
+    <string name="travel">Travel</string>
+    <string name="entertaiment">Entertaiment</string>
+    <string name="service">Public Service</string>
+    <string name="facility">Public Facility</string>
+    
+    <!-- For subCategories -->
 </resources>

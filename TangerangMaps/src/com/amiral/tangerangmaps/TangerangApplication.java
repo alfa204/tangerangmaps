@@ -5,34 +5,25 @@
 
 package com.amiral.tangerangmaps;
 
-import java.io.IOException;
+import greendroid.app.GDApplication;
 
-import com.amiral.tangerangmaps.db.DBHelper;
-
-import android.app.Application;
-
-public class TangerangApplication extends Application{
+public class TangerangApplication extends GDApplication{
 	public static final String APP_NAME = "TangerangMaps";
-	private DBHelper dbHelper;
+	
+	  @Override
+	public Class<?> getHomeActivityClass() {
+	        return TangerangMapsMain.class;
+	}
+	  
 	@Override
 	public void onCreate(){
 		super.onCreate();
-		this.dbHelper = new DBHelper(this);
+//		this.dbHelper = new DBHelper(this);
 	}
 	
 	@Override
 	public void onTerminate(){
 		super.onTerminate();
-	}
-	
-	public DBHelper getDBHelper(){
-		try{
-			dbHelper.createDataBase();
-		}catch (IOException e) {
-			// TODO: handle exception
-			throw new Error("Unable to create database");
-		}
-		return this.dbHelper;
 	}
 	
 }

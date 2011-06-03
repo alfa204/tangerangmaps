@@ -9,6 +9,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.amiral.tangerangmaps.object.PoiLokasi;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -39,7 +43,7 @@ public class DBHelper extends SQLiteOpenHelper{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public synchronized DBHelper getDBAdapterInstance(Context context){
+	public static synchronized DBHelper getDBAdapterInstance(Context context){
 		if (mDBConnection == null){
 			mDBConnection = new DBHelper(context);
 		}
@@ -207,6 +211,83 @@ public class DBHelper extends SQLiteOpenHelper{
 	public int updateRecordsInDB(String tableName, ContentValues initalValues,
 			String whereClause, String whereArgs[]){
 		return myDataBase.update(tableName, initalValues, whereClause, whereArgs);
+	}
+	
+	public static String ID = "id_lokasi";
+	public static String idKategori = "id_kategori";
+	public String nama = "nama";
+	public String alamat = "alamat";
+	public String idKecamatan = "id_kec";
+	public String idKelurahan = "id_kel";
+	public String telp = "telp";
+	public String fax = "fax";
+	public String email= "email";
+	public String website = "website";
+	public String keterangan = "keterangan";
+	public String lat = "lat";
+	public String lon = "lng";
+	public String imageUrl = "image";
+	public String tanggalInput = "tgl_input";
+	public String kontribName = "kontrib_nama";
+	public String kontribEmail = "kontrib_email";
+	
+	public long insertPoi(PoiLokasi poi){
+		ContentValues cv = new ContentValues();
+		
+		cv.put(idKategori, poi.getIdKategori());
+		cv.put(nama, poi.getNama());
+		cv.put(alamat, poi.getAlamat());
+		cv.put(idKecamatan, poi.getIdKecamatan());
+		cv.put(idKelurahan, poi.getIdKelurahan());
+		cv.put(telp, poi.getTelp());
+		cv.put(fax, poi.getFax());
+		cv.put(email, poi.getEmail());
+		cv.put(website, poi.getWebsite());
+		cv.put(keterangan, poi.getKeterangan());
+		cv.put(lat, poi.getLat());
+		cv.put(lon, poi.getLon());
+		cv.put(imageUrl, poi.getImageUrl());
+		cv.put(tanggalInput, poi.getTanggalInput());
+		cv.put(kontribName, poi.getKontribName());
+		cv.put(kontribEmail, poi.getKontribEMail());
+		
+		return myDataBase.insert("lokasi", null, cv);
+	}
+	
+	public ArrayList<PoiLokasi> getAllPoi(){
+		ArrayList<PoiLokasi> pois = new ArrayList<PoiLokasi>();
+		
+		try{
+			Cursor c= myDataBase.query("lokasi", null, null, null, null, null, null);
+			while(c.moveToNext()){
+				
+				PoiLokasi poi = new PoiLokasi();
+				
+				poi.setIdKategori(c.getString(c.getColumnIndex(idKategori)));
+				poi.setNama(c.getString(c.getColumnIndex(nama)));
+				poi.setAlamat(c.getString(c.getColumnIndex(alamat)));
+				poi.setIdKecamatan(c.getString(c.getColumnIndex(idKecamatan)));
+				poi.setIdKelurahan(c.getString(c.getColumnIndex(idKelurahan)));
+				poi.setTelp(c.getString(c.getColumnIndex(telp)));
+				poi.setFax(c.getString(c.getColumnIndex(fax)));
+				poi.setEmail(c.getString(c.getColumnIndex(email)));
+				poi.setWebsite(c.getString(c.getColumnIndex(website)));
+				poi.setKeterangan(c.getString(c.getColumnIndex(keterangan)));
+				poi.setLat(c.getString(c.getColumnIndex(lat)));
+				poi.setLon(c.getString(c.getColumnIndex(lon)));
+				poi.setImageUrl(c.getString(c.getColumnIndex(imageUrl)));
+				poi.setTanggalInput(c.getString(c.getColumnIndex(tanggalInput)));
+				poi.setKontribName(c.getString(c.getColumnIndex(kontribName)));
+				poi.setKontribEMail(c.getString(c.getColumnIndex(kontribEmail)));
+				
+				pois.add(poi);
+			}
+		}catch(SQLiteException e){
+			Log.e("GetAllPOI Array List", e.getMessage());			
+		}
+		
+		return pois;
+		
 	}
 	
 }

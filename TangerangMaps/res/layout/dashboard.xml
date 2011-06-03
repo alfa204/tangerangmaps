@@ -52,19 +52,19 @@
 				android:id="@+id/kategori_apotik"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:background="@drawable/contoh1"
+				android:background="@drawable/gov48"
 				android:onClick="pilihKategori"/>
 			<Button
 				android:id="@+id/kategori_puskesmas"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:background="@drawable/contoh2"
+				android:background="@drawable/gov72"
 				android:onClick="pilihKategori"/>
 			<ImageButton
 				android:id="@+id/kategori_rumah_sakit"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/iconrs"
+				android:src="@drawable/gov90"
 				android:onClick="pilihKategori"/>
 			</TableRow>
 			<TableRow>

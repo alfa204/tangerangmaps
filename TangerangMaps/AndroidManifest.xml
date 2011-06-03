@@ -15,7 +15,8 @@
     	android:icon="@drawable/icon" 
     	android:label="@string/app_name" 
     	android:debuggable="true"
-    	android:name=".TangerangApplication">
+    	android:name=".TangerangApplication"
+    	android:theme="@style/Theme.coba">
         
         <activity android:name=".TangerangMapsOpening"
                   android:label="@string/app_name"
@@ -26,6 +27,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".TangerangMaps"
+        		android:label="@string/app_name">
+        </activity>
+        <activity android:name=".TangerangMapsMain"
         		android:label="@string/app_name">
         </activity>
         
@@ -50,17 +54,56 @@
        	</activity>
        	
        	<activity android:name=".News"
-       			android:label="About">
+       			android:label="News">
        	</activity>
        	<activity android:name=".util.LauncherLayar"
        			android:label="Camera">
        	</activity>
+       	<activity android:name=".util.MapRoute"
+       			android:label="Camera">
+       	</activity>
+       	
+       	<activity android:name=".Categories"
+       			android:label="Categories">
+       	</activity>
         
+        <activity android:name=".ui.Goverment"
+       			android:label="Categories">
+       	</activity>
+       	<activity android:name=".ui.Education"
+       			android:label="Education">
+       	</activity>
+       	<activity android:name=".ui.Health"
+       			android:label="Education">
+       	</activity>
+       	<activity android:name=".ui.Living"
+       			android:label="Living">
+       	</activity>
+       	<activity android:name=".ui.Transportation"
+       			android:label="Transportation">
+       	</activity>
+       	<activity android:name=".ui.ListPoi"
+       			android:label="ListPoi">
+       	</activity>
+       	<activity android:name=".ui.InfoPoiDetail"
+       			android:label="Poi Details">
+       	</activity>
+       	<activity android:name=".ui.InfoPoiDetailInformation"
+       			android:label="Poi Details">
+       	</activity>
+       	<activity android:name=".ui.InfoPoiDetailComment"
+       			android:label="Poi Details">
+       	</activity>
+       	<activity android:name=".ui.InfoPoiDetailMap"
+       			android:label="Poi Map">
+       	</activity>
 	<uses-library android:name="com.google.android.maps"/>
 	
     </application>
-   
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
    <uses-permission android:name="android.permission.ACCESS_LOCATION"/>
-   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest> 

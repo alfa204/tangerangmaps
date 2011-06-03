@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:background="@color/white">
+   <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="6dip">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/btnTk"
+                style="@style/HomeButton"
+                android:onClick="eventEdu"
+                android:text="@string/tk"/>
+            <Button android:id="@+id/btnSd"
+                style="@style/HomeButton"
+                android:onClick="eventEdu"
+                android:text="@string/sd"
+                android:drawableTop="@drawable/iconsd"/>
+           
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/btnSmp"
+                style="@style/HomeButton"
+                android:onClick="eventEdu"
+                android:text="@string/smp"
+                android:drawableTop="@drawable/iconsmp"/>
+            <Button android:id="@+id/btnSma"
+                style="@style/HomeButton"
+                android:onClick="eventEdu"
+                android:text="@string/sma"
+                android:drawableTop="@drawable/iconsma"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/btnUniversitas"
+                style="@style/HomeButton"
+                android:onClick="eventEdu"
+                android:text="@string/universitas"
+                android:drawableTop="@drawable/iconuniversitas"/>
+            <Button android:id="@+id/btnKursus"
+                style="@style/HomeButton"
+                android:onClick="eventEdu"
+                android:text="@string/others"/>
+        </LinearLayout>
+   </LinearLayout>
+</LinearLayout>
