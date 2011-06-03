@@ -1,10 +1,10 @@
 package com.amiral.tangerangmaps.object;
 
 public class PoiIconItem {
-	final String name;
-	final int img;
+	public final int name;
+	public final int img;
 	
-	public PoiIconItem(String name, int image){
+	public PoiIconItem(int name, int image){
 		this.name = name;
 		this.img = image;
 	}

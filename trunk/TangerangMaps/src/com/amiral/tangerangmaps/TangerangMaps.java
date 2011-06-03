@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
-import android.widget.LinearLayout.LayoutParams;
+import greendroid.app.GDTabActivity;
 
 public class TangerangMaps extends TabActivity {
     /** Called when the activity is first created. */
@@ -20,6 +20,7 @@ public class TangerangMaps extends TabActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        
         Tampilan myTampilan = null;
         Drawable d = this.getResources().getDrawable(R.drawable.tabbackground);
         //Menginisalisasi TAB
@@ -33,6 +34,7 @@ public class TangerangMaps extends TabActivity {
         tabSpec = host.newTabSpec("dasboard")
         		.setIndicator(myTampilan).setContent(intent);
         host.addTab(tabSpec);
+//        addTabSpect(tabSpec);
         
         //tab Peta
         intent = new Intent().setClass(this, MapTangerang.class);
@@ -40,6 +42,7 @@ public class TangerangMaps extends TabActivity {
         myTampilan.setBackgroundDrawable(d);
         tabSpec= host.newTabSpec("map")
         		.setIndicator(myTampilan).setContent(intent);
+//        addTabSpect(tabSpec);
         host.addTab(tabSpec);
        
         //tab Augmented Reality
@@ -61,6 +64,7 @@ public class TangerangMaps extends TabActivity {
         	.setIndicator(myTampilan)
         		.setContent(intent);
         host.addTab(tabSpec);
+//        addTabSpect(tabSpec);
         
         //tab Tambah lokasi
         intent = new Intent().setClass(this, AddPOI.class);
@@ -71,6 +75,7 @@ public class TangerangMaps extends TabActivity {
         		.setIndicator(myTampilan)
         				.setContent(intent);
         host.addTab(tabSpec);
+//        addTabSpect(tabSpec);
     }
     
     private class Tampilan extends LinearLayout {

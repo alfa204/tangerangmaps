@@ -1,60 +1,123 @@
 package com.amiral.tangerangmaps;
 
+import com.amiral.tangerangmaps.webservice.GetAllPOI;
+
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 public class Dashboard extends Activity {
 
+	Context ctx;
 	@Override
 	public void onCreate(Bundle b){
 		super.onCreate(b);
 		setContentView(R.layout.dashboard);
+		ctx = this;
+		
+//		new PoiSync().execute();
 	}
 	
 	public void pilihKategori(View tombol){
 		switch (tombol.getId()) {
 		case R.id.kategori_apotik:
-			Toast.makeText(this, "Apotik dipilih", Toast.LENGTH_SHORT).show();
+			keMap("1");
 			break;
 		case R.id.kategori_bank:
-			Toast.makeText(this, "Bank dipilih",Toast.LENGTH_SHORT).show(); break;
+			keMap("2");break;
 		case R.id.kategori_hotel:
-			Toast.makeText(this, "Hotel dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("3");break;
 		case R.id.kategori_kecamatan:
-			Toast.makeText(this, "Kecamatan dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("4");break;
 		case R.id.kategori_kelurahan:
-			Toast.makeText(this, "Kelurahan dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("5");break;
 		case R.id.kategori_lain:
-			Toast.makeText(this, "Lain-lain dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("6");break;
 		case R.id.kategori_pasar:
-			Toast.makeText(this, "Pasar dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("7");break;
 		case R.id.kategori_polisi:
-			Toast.makeText(this, "Polisi dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("8");break;
 		case R.id.kategori_pos:
-			Toast.makeText(this, "Kantor Pos dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("9");break;
 		case R.id.kategori_puskesmas:
-			Toast.makeText(this, "Puskesmas dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("10");break;
 		case R.id.kategori_rumah_sakit:
-			Toast.makeText(this, "Rumah Sakit dipilih", Toast.LENGTH_SHORT).show();break;
+			keMap("11");break;
 		case R.id.kategori_sd:
-			Toast.makeText(this, "SD dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("12");break;
 		case R.id.kategori_sma:
-			Toast.makeText(this, "SMA dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("13");break;
 		case R.id.kategori_smp:
-			Toast.makeText(this, "SMP dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("14");break;
 		case R.id.kategori_swalayan:
-			Toast.makeText(this, "Swalayan dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("15");break;
 		case R.id.kategori_transportasi:
-			Toast.makeText(this, "Transportasi dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("16");break;
 		case R.id.kategori_universitas:
-			Toast.makeText(this, "Universitas dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("17");break;
 		case R.id.kategori_wisata:
-			Toast.makeText(this, "Object Wisata dipilih", Toast.LENGTH_SHORT).show(); break;
+			keMap("18");break;
 		default:
 			break;
 		}
 	}
+	
+	public void keMap(String id){
+		Intent i = new Intent(this, MapTangerang.class);
+		i.putExtra("kategori", id);
+		startActivity(i);
+	}
 
+	
+	class PoiSync extends AsyncTask<Void, Void, Boolean>{
+
+		private final ProgressDialog dialog = new ProgressDialog(ctx);
+
+		protected void onPreExecute() {
+			this.dialog.setMessage("Get Data from TangerangMaps.com, please wait...");
+			this.dialog.show();
+			Log.i("coba", "async start");
+		}
+		
+		@Override
+		protected Boolean doInBackground(Void... params) {
+			// TODO Auto-generated method stub
+			GetAllPOI getPoi = new GetAllPOI(ctx);
+			
+			return getPoi.getAllPoi();
+		}
+		
+		protected void onPostExecute(Boolean result){
+			if(result){
+				dialog.hide();
+				Toast.makeText(ctx, "Update Database Berhasil",
+						Toast.LENGTH_LONG).show();
+			}else{
+				dialog.hide();
+				AlertDialog alertDialog = new AlertDialog.Builder(getParent())
+						.create();
+				alertDialog.setTitle("Connection Error");
+				alertDialog.setMessage("No connection detected");
+				alertDialog.setButton("OK",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog,
+									int which) {
+
+								// here you can add functions
+
+							}
+						});
+				alertDialog.show();
+			}
+		}
+	}
+	
 }

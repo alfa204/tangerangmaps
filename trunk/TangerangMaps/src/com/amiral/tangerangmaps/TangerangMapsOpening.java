@@ -37,7 +37,7 @@ public class TangerangMapsOpening extends Activity {
 					/**
 					 * jika telah selesai maka baru di panggil activiy utama
 					 */
-					startActivity(new Intent(TangerangMapsOpening.this,TangerangMaps.class));
+					startActivity(new Intent(TangerangMapsOpening.this,TangerangMapsMain.class));
 					finish();
 				}
 			}

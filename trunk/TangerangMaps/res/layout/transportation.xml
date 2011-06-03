@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:background="@color/white">
+  <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="6dip">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/btnSpbu"
+                style="@style/HomeButton"
+                android:onClick="eventTransportation"
+                android:text="@string/spbu"/>
+            <Button android:id="@+id/btnTerminal"
+                style="@style/HomeButton"
+                android:onClick="eventTransportation"
+                android:text="@string/terminal"/>
+            
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/btnStasiun"
+                style="@style/HomeButton"
+                android:onClick="eventTransportation"
+                android:text="@string/stasiun"/>
+            <Button android:id="@+id/btnBandara"
+                style="@style/HomeButton"
+                android:onClick="eventTransportation"
+                android:text="@string/bandara"/>
+        </LinearLayout>
+   </LinearLayout>
+</LinearLayout>

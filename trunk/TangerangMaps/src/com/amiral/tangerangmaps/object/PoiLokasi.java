@@ -5,24 +5,30 @@
 
 package com.amiral.tangerangmaps.object;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class PoiLokasi {
 
-	public String ID;
-	public String idKategori;
-	public String nama;
-	public String alamat;
-	public String idKecamatan;
-	public String idKelurahan;
-	public String telp;
-	public String fax;
-	public String email;
-	public String website;
-	public String keterangan;
-	public String lat;
-	public String lon;
-	public String imageUrl;
-	public String tanggalInput;
+public class PoiLokasi implements Parcelable{
+
+	private String ID;
+	private String idKategori;
+	private String nama;
+	private String alamat;
+	private String idKecamatan;
+	private String idKelurahan;
+	private String telp;
+	private String fax;
+	private String email;
+	private String website;
+	private String keterangan;
+	private String lat;
+	private String lon;
+	private String imageUrl;
+	private String tanggalInput;
+	private String kontribName;
+	private String kontribEMail;
+	private String jarak;
 	
 	
 	public PoiLokasi() {
@@ -31,7 +37,7 @@ public class PoiLokasi {
 	public PoiLokasi(String iD, String idKategori, String nama, String alamat,
 			String idKecamatan, String idKelurahan, String telp, String fax,
 			String email, String website, String keterangan, String lat,
-			String lon, String imageUrl, String tanggalInput) {
+			String lon, String imageUrl, String tanggalInput, String kontribName, String kontribEmail) {
 		super();
 		ID = iD;
 		this.idKategori = idKategori;
@@ -48,6 +54,8 @@ public class PoiLokasi {
 		this.lon = lon;
 		this.imageUrl = imageUrl;
 		this.tanggalInput = tanggalInput;
+		this.kontribName = kontribName;
+		this.kontribEMail = kontribEmail;
 	}
 	
 	public String getID() {
@@ -140,6 +148,84 @@ public class PoiLokasi {
 	public void setTanggalInput(String tanggalInput) {
 		this.tanggalInput = tanggalInput;
 	}
+	public String getKontribName() {
+		return kontribName;
+	}
+	public void setKontribName(String kontribName) {
+		this.kontribName = kontribName;
+	}
+	public String getKontribEMail() {
+		return kontribEMail;
+	}
+	public void setKontribEMail(String kontribEMail) {
+		this.kontribEMail = kontribEMail;
+	}
+
+	public String getJarak() {
+		return jarak;
+	}
+	public void setJarak(String jarak) {
+		this.jarak = jarak;
+	}
 	
+	@Override
+	public int describeContents() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		// TODO Auto-generated method stub
+		dest.writeString(ID);
+		dest.writeString(idKategori);
+		dest.writeString(nama);
+		dest.writeString(alamat);
+		dest.writeString(tanggalInput);
+		dest.writeString(idKecamatan);
+		dest.writeString(idKelurahan);
+		dest.writeString(telp);
+		dest.writeString(fax);
+		dest.writeString(email);
+		dest.writeString(website);
+		dest.writeString(keterangan);
+		dest.writeString(lat);
+		dest.writeString(lon);
+		dest.writeString(imageUrl);
+		dest.writeString(kontribName);
+		dest.writeString(kontribEMail);
+		dest.writeString(jarak);
+	}
 	
+	public static final Parcelable.Creator<PoiLokasi> CREATOR = new Parcelable.Creator<PoiLokasi>() {
+        public PoiLokasi createFromParcel(Parcel in) {
+            return new PoiLokasi(in);
+        }
+
+        public PoiLokasi[] newArray(int size) {
+            return new PoiLokasi[size];
+        }
+    };
+    
+ // example constructor that takes a Parcel and gives you an object populated with it's values
+    private PoiLokasi(Parcel in) {
+    	ID = in.readString();
+    	idKategori = in.readString();
+    	nama = in.readString();
+    	alamat = in.readString();
+    	tanggalInput = in.readString();
+    	idKecamatan = in.readString();
+    	idKelurahan = in.readString();
+    	telp = in.readString();
+    	fax = in.readString();
+    	email = in.readString();
+    	website = in.readString();
+    	keterangan = in.readString();
+    	lat = in.readString();
+    	lon = in.readString();
+    	imageUrl = in.readString();
+    	kontribName = in.readString();
+    	kontribEMail = in.readString();
+    	jarak = in.readString();
+    }
+
 }
