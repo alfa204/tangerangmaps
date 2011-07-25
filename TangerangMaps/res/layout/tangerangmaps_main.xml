@@ -5,6 +5,192 @@
   android:layout_height="fill_parent"
   android:orientation="vertical"
   android:background="@color/white">
+  
+  <!-- Weather information -->
+  <LinearLayout
+  	android:orientation="vertical"
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:layout_margin="15dip"
+  	android:background="@drawable/weather_background">
+  	<RelativeLayout
+  		android:layout_height="wrap_content"
+  		android:layout_width="fill_parent">
+  		<LinearLayout
+  			id="@+id/humidityLayout"
+  			android:layout_centerVertical="true" 
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical" 
+            android:layout_height="wrap_content" 
+            android:orientation="vertical" 
+            android:layout_width="@dimen/weather_space">
+        	<TextView
+        		android:id="@+id/weatherTitle"
+        		android:textColor="@color/white" 
+                android:layout_height="wrap_content" 
+                android:layout_gravity="center_horizontal" 
+                android:layout_width="wrap_content" 
+                android:textSize="@dimen/weather_size"
+                android:textStyle="bold"
+                android:text="Cuaca Hari ini"/>	
+        </LinearLayout>
+        <LinearLayout
+        	android:id="@+id/visiLayout"
+        	android:layout_centerVertical="true" 
+            android:gravity="center_vertical" 
+            android:layout_height="wrap_content" 
+            android:orientation="vertical" 
+            android:layout_alignParentRight="true" 
+            android:layout_width="@dimen/weather_space">
+        </LinearLayout>
+  	</RelativeLayout>
+  	<RelativeLayout
+            android:id="@+id/OtherWeatherInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin_space">
+            
+            <LinearLayout
+                android:id="@+id/humidityLayout"
+                android:orientation="vertical"
+                android:layout_width="@dimen/weather_space"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true">
+        
+        <!-- Weather icon -->
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/weather_hot_ic">
+        </ImageView>
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/visiLayout"
+                android:orientation="vertical"
+                android:layout_width="@dimen/weather_space"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/location_size"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            android:text="Tangerang">
+        </TextView>       
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/temperature_size"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="26C">
+        </TextView>
+        
+         <TextView
+            android:id="@+id/textCond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/location_size"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:text="Haze">
+        </TextView>
+</LinearLayout>
+    </RelativeLayout>
+        <RelativeLayout 
+        	android:layout_marginLeft="@dimen/margin_space" 
+        	android:layout_marginBottom="@dimen/margin_space" 
+        	android:layout_height="wrap_content" 
+        	android:background="@drawable/otherweather_ic" 
+        	android:layout_marginRight="@dimen/margin_space" 
+        	android:id="@+id/OtherWeatherInfo" 
+        	android:layout_width="wrap_content">
+            	<LinearLayout 
+            		android:layout_centerVertical="true" 
+            		android:layout_alignParentLeft="true" 
+            		android:id="@+id/humidityLayout" 
+            		android:gravity="center_vertical" 
+            		android:layout_height="wrap_content" 
+            		android:orientation="vertical" 
+            		android:layout_width="@dimen/weather_space">
+                
+                	<TextView 
+                		android:textColor="@color/blue" 
+                		android:layout_height="wrap_content" 
+                		android:layout_gravity="center_horizontal" 
+                		android:layout_width="wrap_content" 
+                		android:textSize="@dimen/weather_size" 
+                		android:id="@+id/humidityTitle" 
+                		android:text="Humidity" 
+                		android:textStyle="bold">
+                	</TextView>
+                	
+                	<TextView 
+                		android:textColor="@color/blue" 
+                		android:layout_height="wrap_content" 
+                		android:layout_gravity="center_horizontal"
+                 		android:layout_width="wrap_content" 
+                 		android:id="@+id/humidityValue" 
+                 		android:text="76%" 
+                 		android:textStyle="bold">
+                 	</TextView>
+                 	
+            	</LinearLayout>
+            	
+            	<LinearLayout 
+            		android:layout_centerVertical="true" 
+            		android:id="@+id/visiLayout" 
+            		android:gravity="center_vertical" 
+            		android:layout_height="wrap_content" 
+            		android:orientation="vertical" 
+            		android:layout_alignParentRight="true" 
+            		android:layout_width="@dimen/weather_space">
+                
+                	<TextView 
+                		android:textColor="@color/blue" 
+                		android:layout_height="wrap_content" 
+                		android:layout_gravity="center_horizontal" 
+                		android:layout_width="wrap_content" 
+                		android:textSize="@dimen/weather_size" 
+                		android:id="@+id/visiTitle" 
+                		android:text="Visibility" 
+                		android:textStyle="bold">
+                	</TextView>
+                
+                	<TextView 
+                		android:textColor="@color/blue" 
+                		android:layout_height="wrap_content" 
+                		android:layout_gravity="center_horizontal" 
+                		android:layout_width="wrap_content" 
+                		android:id="@+id/visiValue" 
+                		android:text="10.0" 
+                		android:textStyle="bold">
+                	</TextView>
+            	</LinearLayout>
+        </RelativeLayout>		
+  </LinearLayout>
+  <!--
+  <TextView
+  	android:id="@+id/alamat"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:textStyle="bold"/>
  <GridView
 	  android:id="@+id/grid"
 	  android:layout_width="fill_parent"
@@ -14,7 +200,7 @@
 	  android:verticalSpacing="50dip"
 	  android:layout_marginTop="10dip"
 	  android:layout_weight="1"/> 
-	 <!-- <LinearLayout
+	  <LinearLayout
 		android:orientation= "vertical" 
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
