@@ -7,6 +7,10 @@
     <string name="tab_dashboard">Categories</string>
     <string name="tab_addlocation">Add POI</string>
     <string name="tab_news">News</string>
+    <string name="google_map_api_key">0AHAjGk0fl23w8ackgdEdYqm5tzeBfnKxB-F7cQ</string>
+    
+    <!-- For Action Bar -->
+    <string name="acb_direction">Direction</string>
     
     <!-- for dasboard -->
     <string name="apotik">Apotik</string>

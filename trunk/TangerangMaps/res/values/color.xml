@@ -8,4 +8,8 @@
 	<color name="backgroundLogo">#1FCCF4</color>
 	<color name="white">#ffffff</color>
 	<color name="foreground1">#ff355689</color>
+	
+	<color name="green">#7EFF00</color>
+	<color name="orange">#FF9C0B</color>
+	<color name="blue">#00375b</color>
 </resources>

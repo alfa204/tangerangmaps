@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:background="@color/white">
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginTop="5dip">
+      <Button 
+        	android:id="@+id/btnR1C1"
+            style="@style/HomeButton"
+            android:onClick="btnEvent"
+            android:drawableTop="@drawable/btn_street"/>
+      <Button android:id="@+id/btnR1C2"
+            style="@style/HomeButton"
+            android:onClick="btnEvent"
+            android:drawableTop="@drawable/btn_goverment"/>
+   </LinearLayout>
+   <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginTop="5dip">
+      <Button 
+        	android:id="@+id/btnR2C1"
+            style="@style/HomeButton"
+            android:onClick="btnEvent"
+            android:drawableTop="@drawable/btn_street"/>
+      <Button android:id="@+id/btnR2C2"
+            style="@style/HomeButton"
+            android:onClick="btnEvent"
+            android:drawableTop="@drawable/btn_goverment"/>
+   </LinearLayout>
+   <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginTop="5dip">
+      <Button 
+        	android:id="@+id/btnR3C1"
+            style="@style/HomeButton"
+            android:onClick="btnEvent"
+            android:drawableTop="@drawable/btn_street"/>
+      <Button android:id="@+id/btnR3C2"
+            style="@style/HomeButton"
+            android:onClick="btnEvent"
+            android:drawableTop="@drawable/btn_goverment"/>
+   </LinearLayout>
+  
+</LinearLayout>
