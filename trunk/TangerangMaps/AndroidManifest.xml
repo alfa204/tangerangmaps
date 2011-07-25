@@ -97,8 +97,11 @@
        	<activity android:name=".ui.InfoPoiDetailMap"
        			android:label="Poi Map">
        	</activity>
-       	<activity android:name="ui.Categories"
+       	<activity android:name=".ui.Categories"
        			android:label="Kategori">
+       	</activity>
+       		<activity android:name=".ui.Keyphone"
+       			android:label="Keyphone">
        	</activity>
        
 	<uses-library android:name="com.google.android.maps"/>
