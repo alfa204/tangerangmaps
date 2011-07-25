@@ -6,6 +6,7 @@ import com.tangerangmaps.R;
 import com.tangerangmaps.adapter.IconAdapter;
 import com.tangerangmaps.object.PoiIconItem;
 import com.tangerangmaps.ui.Categories;
+import com.tangerangmaps.ui.Keyphone;
 import com.tangerangmaps.ui.NearByMap;
 import com.tangerangmaps.util.GPSCallback;
 import com.tangerangmaps.util.GPSManager;
@@ -31,7 +32,7 @@ import greendroid.app.GDActivity;
 import greendroid.widget.ActionBarItem;
 import greendroid.widget.ActionBarItem.Type;
 
-public class TangerangMapsMain extends GDActivity implements OnItemClickListener, LocationListener{ //, GPSCallback
+public class TangerangMapsMain extends GDActivity implements LocationListener{ //, GPSCallback
 	
 	private GPSManager gpsManager = null;
 	private double userLon = 0;
@@ -48,7 +49,6 @@ public class TangerangMapsMain extends GDActivity implements OnItemClickListener
 //		setContentView(R.layout.tangerangmaps_main);
 		setActionBarContentView(R.layout.tangerangmaps_main);
 		setTitleColor(R.color.lightblack);
-//		GridView gridView = (GridView) findViewById(R.id.grid);
 //		tv = (TextView) findViewById(R.id.alamat);
 		
 		
@@ -63,41 +63,37 @@ public class TangerangMapsMain extends GDActivity implements OnItemClickListener
 		bestProvider = locationManager.getBestProvider(criteria, false);
 		location = locationManager.getLastKnownLocation(bestProvider);
 		
-//		
-//		gridView.setAdapter(new IconAdapter(this, 
-//				new PoiIconItem(R.string.aboutTangerang, R.drawable.gov90),
-//				new PoiIconItem(R.string.categories, R.drawable.map),
-//				new PoiIconItem(R.string.transportRoute, R.drawable.transportation),
-//				new PoiIconItem(R.string.liveView, R.drawable.camera),
-//				new PoiIconItem(R.string.keyTelephone, R.drawable.tab_icon_news)));
-//		
-//		gridView.setOnItemClickListener(this);
 		addActionBarItem(Type.LocateMyself, R.id.action_bar_nearby);
 		addActionBarItem(Type.Search,R.id.action_bar_search);
 		
 	}
 	
+	/*
+	 * Untuk click handler
+	 */
+	public void eventClick(View v){
+		
+		Intent i;
+		switch (v.getId()) {
+		case R.id.btnCityInfo:
+			
+			break;
+		case R.id.btnPoi:
+			
+			break;
+		
+		case R.id.btnPhone:
+			i = new Intent(this, Keyphone.class);
+			startActivity(i);
+			break;
+		}
+	}
 	@Override
 	protected void onResume(){
 		super.onResume();
 		
 		locationManager.requestLocationUpdates(bestProvider, 20000, 1, this);
 		getUserLocation();
-	}
-	@Override
-	public void onItemClick(AdapterView<?> arg0, View v, int index, long arg3) {
-		// TODO Auto-generated method stub
-		switch (index) {
-		case 0:
-//			Toast.makeText(this, "About Tangerang", Toast.LENGTH_LONG).show();
-			startActivity(new Intent(v.getContext(), Dashboard.class));
-			break;
-		case 1:
-			startActivity(new Intent(this, Categories.class));
-		default:
-			Toast.makeText(this, "Coba", Toast.LENGTH_LONG).show();
-			break;
-		}
 	}
 	
 	public void getUserLocation(){
