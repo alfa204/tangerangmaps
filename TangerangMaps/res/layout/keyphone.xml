@@ -4,8 +4,8 @@
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
   android:orientation="vertical"
-  android:background="@color/white">
-  <ScrollView
+  android:background="@color/bluelight">
+	<ScrollView
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
 	<LinearLayout
@@ -13,6 +13,86 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="6dip">
-    </LinearLayout>
-  </ScrollView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dip">
+            <Button 
+            	android:id="@+id/btn_phone_police"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Police Office"
+                android:drawableTop="@drawable/phone_1"/>
+            <Button android:id="@+id/btn_phone_fire"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Fire Rescue"
+                android:drawableTop="@drawable/phone_2"/>
+    	</LinearLayout>
+    	<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="20dip">
+            <Button 
+            	android:id="@+id/btn_phone_health"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Health"
+                android:drawableTop="@drawable/phone_3"/>
+            <Button android:id="@+id/btn_phone_govern"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Government"
+                android:drawableTop="@drawable/phone_4"/>
+    	</LinearLayout>
+    	<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="20dip">
+            <Button 
+            	android:id="@+id/btn_phone_pln"
+                style="@style/HomeButton"
+                android:textColor="@color/white"
+                android:onClick="btnEvent"
+                android:text="PLN"
+                android:drawableTop="@drawable/phone_5"/>
+            <Button android:id="@+id/btn_phone_pdam"
+                style="@style/HomeButton"
+                android:textColor="@color/white"
+                android:onClick="btnEvent"
+                android:text="PDAM"
+                android:drawableTop="@drawable/phone_6"/>
+    	</LinearLayout>
+    	<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="20dip">
+            <Button 
+            	android:id="@+id/btn_phone_telkom"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="TELKOM"
+                android:drawableTop="@drawable/phone_7"/>
+            <Button android:id="@+id/btn_phone_public"
+                style="@style/HomeButton"
+                android:textColor="@color/white"
+                android:onClick="btnEvent"
+                android:text="Public Service"
+                android:drawableTop="@drawable/phone_8"/>
+    	</LinearLayout>
+   </LinearLayout>
+   </ScrollView>
 </LinearLayout>

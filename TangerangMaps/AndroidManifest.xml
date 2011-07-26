@@ -100,10 +100,60 @@
        	<activity android:name=".ui.Categories"
        			android:label="Kategori">
        	</activity>
-       		<activity android:name=".ui.Keyphone"
+       	<activity android:name=".ui.Keyphone"
        			android:label="Keyphone">
        	</activity>
-       
+       	<activity android:name=".ui.CityGuide"
+       			android:label="City Information">
+       	</activity>
+       	<activity android:name=".ui.PointofInterest"
+       			android:label="Point of Interest">
+       	</activity>
+       	<activity
+        	android:name=".CityInfoDetail"
+        	android:label="City Information Detail">
+        </activity>
+       	<activity
+        	android:name=".TentangTMdroid"
+        	android:label="@string/tentang_judul">
+        </activity>
+        <activity
+        	android:name=".ui.PhonePolice"
+        	android:label="Police Office">
+        </activity>
+        <activity
+        	android:name=".ui.PhoneFire"
+        	android:label="Fire Rescue">
+        </activity>
+        <activity
+        	android:name=".ui.PhoneHealth"
+        	android:label="Health">
+        </activity>
+        <activity
+        	android:name=".ui.PhoneGovernment"
+        	android:label="Government">
+        </activity>
+        <activity
+        	android:name=".ui.PhonePln"
+        	android:label="PLN">
+        </activity>
+        <activity
+        	android:name=".ui.PhonePdam"
+        	android:label="PDAM">
+        </activity>
+        <activity
+        	android:name=".ui.PhoneTelkom"
+        	android:label="TELKOM">
+        </activity>
+        <activity
+        	android:name=".ui.PhonePublic"
+        	android:label="Public Service">
+        </activity>
+        <activity
+        	android:name=".phonecalls"
+        	android:label="Dial Key Telephone">
+        </activity>
+        
 	<uses-library android:name="com.google.android.maps"/>
 	
     </application>
@@ -113,4 +163,5 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
    <uses-permission android:name="android.permission.ACCESS_LOCATION"/>
    <uses-permission android:name="android.permission.INTERNET"/>
+   <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
 </manifest> 

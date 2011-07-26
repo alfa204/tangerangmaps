@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:background="@color/bluelight">
+	<ScrollView
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dip">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dip">
+            <Button 
+            	android:id="@+id/btnApotik"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Apotik"
+                android:drawableTop="@drawable/category_1"/>
+            <Button android:id="@+id/btnBank"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Bank"
+                android:drawableTop="@drawable/category_2"/>
+    	</LinearLayout>
+    	<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dip">
+            <Button 
+            	android:id="@+id/btnHotel"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Hotel"
+                android:drawableTop="@drawable/category_3"/>
+            <Button android:id="@+id/btnKecamatan"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Kantor Kelurahan"
+                android:drawableTop="@drawable/category_4"/>
+    	</LinearLayout>
+    	<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dip">
+            <Button 
+            	android:id="@+id/btnKelurahan"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Kantor Kelurahan"
+                android:drawableTop="@drawable/category_5"/>
+            <Button android:id="@+id/btnLainlain"
+                style="@style/HomeButton"
+                android:textColor="@color/white"
+                android:onClick="btnEvent"
+                android:text="Lain-lain"
+                android:drawableTop="@drawable/category_6"/>
+    	</LinearLayout>
+    	<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dip">
+            <Button 
+            	android:id="@+id/btnPasar"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Pasar Tradisional"
+                android:drawableTop="@drawable/category_7"/>
+            <Button android:id="@+id/btnPolisi"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Kantor Polisi"
+                android:drawableTop="@drawable/category_8"/>
+    	</LinearLayout>
+    	<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dip">
+            <Button 
+            	android:id="@+id/btnPos"
+                style="@style/HomeButton"
+                android:textColor="@color/white"
+                android:onClick="btnEvent"
+                android:text="Kantor Pos"
+                android:drawableTop="@drawable/category_9"/>
+            <Button android:id="@+id/btnPuskesmas"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Puskesmas"
+                android:drawableTop="@drawable/category_10"/>
+    	</LinearLayout>
+    	<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dip">
+            <Button 
+            	android:id="@+id/btnRS"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Rumah Sakit"
+                android:drawableTop="@drawable/category_11"/>
+            <Button android:id="@+id/btnSD"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="SD"
+                android:drawableTop="@drawable/category_12"/>
+    	</LinearLayout>
+    	<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dip">
+            <Button 
+            	android:id="@+id/btnSMA"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="SMA"
+                android:drawableTop="@drawable/category_13"/>
+            <Button android:id="@+id/btnSMP"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="SMP"
+                android:drawableTop="@drawable/category_14"/>
+    	</LinearLayout>
+    	<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dip">
+            <Button 
+            	android:id="@+id/btnSwalayan"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Swalayan"
+                android:drawableTop="@drawable/category_15"/>
+            <Button android:id="@+id/btnTransportasi"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Transportasi"
+                android:drawableTop="@drawable/category_16"/>
+    	</LinearLayout>
+    	<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dip">
+            <Button 
+            	android:id="@+id/btnPT"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Perguruan Tinggi"
+                android:drawableTop="@drawable/category_17"/>
+            <Button android:id="@+id/btnWisata"
+                style="@style/HomeButton"
+                android:onClick="btnEvent"
+                android:textColor="@color/white"
+                android:text="Objek Wisata"
+                android:drawableTop="@drawable/category_18"/>
+    	</LinearLayout>
+   </LinearLayout>
+   </ScrollView>
+</LinearLayout>

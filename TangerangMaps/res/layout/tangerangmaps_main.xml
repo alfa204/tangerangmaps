@@ -4,26 +4,27 @@
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
   android:orientation="vertical"
-  android:background="@color/white">
+  android:background="@drawable/custom_shape_main">
   
   <!-- Weather information -->
   <LinearLayout
   	android:orientation="vertical"
   	android:layout_width="wrap_content"
   	android:layout_height="wrap_content"
-  	android:layout_margin="15dip"
-  	android:background="@drawable/weather_background">
+  	android:layout_marginLeft="15dip"
+  	android:layout_marginRight="15dip"	
+  	android:layout_marginTop="20dip"
+  	android:background="@drawable/custom_shape">
   	<RelativeLayout
   		android:layout_height="wrap_content"
   		android:layout_width="fill_parent">
   		<LinearLayout
-  			id="@+id/humidityLayout"
-  			android:layout_centerVertical="true" 
-            android:layout_alignParentLeft="true"
+  			android:id="@+id/humidityLayout"
             android:gravity="center_vertical" 
             android:layout_height="wrap_content" 
             android:orientation="vertical" 
-            android:layout_width="@dimen/weather_space">
+            android:layout_width="fill_parent"
+            android:background="@drawable/custom_shape_head">
         	<TextView
         		android:id="@+id/weatherTitle"
         		android:textColor="@color/white" 
@@ -117,7 +118,7 @@
         	android:layout_marginLeft="@dimen/margin_space" 
         	android:layout_marginBottom="@dimen/margin_space" 
         	android:layout_height="wrap_content" 
-        	android:background="@drawable/otherweather_ic" 
+        	android:background="@drawable/custom_shape_other" 
         	android:layout_marginRight="@dimen/margin_space" 
         	android:id="@+id/OtherWeatherInfo" 
         	android:layout_width="wrap_content">
@@ -129,7 +130,7 @@
             		android:layout_height="wrap_content" 
             		android:orientation="vertical" 
             		android:layout_width="@dimen/weather_space">
-                
+                	
                 	<TextView 
                 		android:textColor="@color/blue" 
                 		android:layout_height="wrap_content" 
@@ -187,7 +188,7 @@
   </LinearLayout>
   
   <!-- City guide information -->
-  <LinearLayout
+  <RelativeLayout
   	android:layout_width="fill_parent"
   	android:layout_height="wrap_content"
   	android:layout_margin="15dip"
@@ -195,11 +196,33 @@
   	android:layout_marginRight="10dip"
   	android:background="@drawable/custom_shape"
   	android:orientation="horizontal">
+  	<LinearLayout
+  		android:layout_width="fill_parent"
+        android:layout_alignParentLeft="true" 
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:background="@drawable/custom_shape_head">
+  	<TextView
+        		android:id="@+id/CityGuideTitle"
+        		android:textColor="@color/white" 
+                android:layout_height="wrap_content" 
+                android:layout_gravity="center_horizontal" 
+                android:layout_width="wrap_content" 
+                android:textSize="@dimen/weather_size"
+                android:textStyle="bold"
+                android:text="City Guide"/>
+    </LinearLayout>	
+    <LinearLayout
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_marginTop="15dip">
 	<Button
 		android:id="@+id/btnCityInfo"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:drawableTop="@drawable/bank"
+		android:drawableTop="@drawable/cityinfo_ic"
+		android:textColor="@color/white"
+		android:textStyle="bold"
 		android:text="City Information"
 		android:layout_weight="0.3"
 		android:layout_marginTop="15dip"
@@ -209,8 +232,10 @@
 		android:id="@+id/btnPoi"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:drawableTop="@drawable/bank"
-		android:text="POI"
+		android:drawableTop="@drawable/poi_ic"
+		android:textStyle="bold"
+		android:textColor="@color/white"
+		android:text="Point of Interest"
 		android:layout_weight="0.3"
 		android:layout_marginTop="15dip"
 		android:background="@null"
@@ -219,13 +244,16 @@
 		android:id="@+id/btnPhone"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:drawableTop="@drawable/bank"
+		android:drawableTop="@drawable/keyphone_ic"
+		android:textStyle="bold"
+		android:textColor="@color/white"
 		android:text="Key Telephone"
 		android:layout_weight="0.3"
 		android:layout_marginTop="15dip"
 		android:background="@null"
 		android:onClick="eventClick"/>
-  </LinearLayout>
+		</LinearLayout>
+	</RelativeLayout>
   <!--
   <TextView
   	android:id="@+id/alamat"

@@ -13,4 +13,6 @@
 	<color name="black">#000000</color>
 	<color name="orange">#FF9C0B</color>
 	<color name="blue">#00375b</color>
+	<color name="bluelight">#0099cc</color>
+	<color name="grey">#666666</color>
 </resources>

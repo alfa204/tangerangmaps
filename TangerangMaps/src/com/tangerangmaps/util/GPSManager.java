@@ -10,7 +10,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 
-
 public class GPSManager
 {
 	private static final int gpsMinTime = 500;
@@ -55,7 +54,7 @@ public class GPSManager
 		
 		final Criteria criteria = new Criteria();
 		criteria.setAccuracy(Criteria.ACCURACY_FINE);
-		criteria.setAltitudeRequired(false);
+		criteria.setAltitudeRequired(true);
 		criteria.setBearingRequired(false);
 		criteria.setCostAllowed(true);
 		criteria.setPowerRequirement(Criteria.POWER_LOW);
@@ -64,8 +63,13 @@ public class GPSManager
 		
 		if (bestProvider != null && bestProvider.length() > 0)
 		{
-			locationManager.requestLocationUpdates(bestProvider, GPSManager.gpsMinTime,
-					GPSManager.gpsMinDistance, locationListener);
+			if(bestProvider.equalsIgnoreCase("network")){
+				locationManager.getLastKnownLocation(bestProvider);
+			}else{
+				locationManager.requestLocationUpdates(bestProvider, GPSManager.gpsMinTime,
+				GPSManager.gpsMinDistance, locationListener);
+			}
+			
 		}
 		else
 		{

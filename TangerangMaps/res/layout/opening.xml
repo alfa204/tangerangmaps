@@ -5,24 +5,5 @@
   android:layout_height="fill_parent"
   android:orientation="vertical"
   android:background="@drawable/splash">
-  
-  <ImageView
-  	android:id="@+id/imgLogo"
- 	android:layout_width="fill_parent"
- 	android:layout_height="wrap_content"
- 	android:layout_gravity="center_horizontal"
- 	android:src="@drawable/logo"
- 	android:layout_centerInParent="true"/>
- 	
- <TextView
- 	android:id="@+id/tv"
- 	android:text="v 0.24"
- 	android:textStyle="bold"
- 	android:textSize="24sp"
- 	android:layout_width="wrap_content"
- 	android:layout_height="wrap_content"
- 	android:textColor="@color/lightblack"
- 	android:layout_marginTop="10dip"
- 	android:layout_below="@id/imgLogo"
- 	android:layout_centerInParent="true"/>
+ 
 </RelativeLayout>
