@@ -101,4 +101,6 @@
     <string name="facility">Public Facility</string>
     
     <!-- For subCategories -->
+    <string name="tentang_judul">About TM</string>
+    <string name="tentang_label">About TM</string>
 </resources>
