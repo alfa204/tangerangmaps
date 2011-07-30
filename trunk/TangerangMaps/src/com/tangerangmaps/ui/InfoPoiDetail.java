@@ -61,9 +61,6 @@ public class InfoPoiDetail extends GDTabActivity{
 		b.putExtra("image", image);
 		addTab(TAB2, "Map", b);
 		
-		Intent a = new Intent(this, InfoPoiDetailComment.class);
-		addTab(TAB3, "Comment", a);
-		
 		
 	}
 	

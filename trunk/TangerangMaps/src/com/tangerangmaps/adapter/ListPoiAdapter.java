@@ -63,8 +63,8 @@ public class ListPoiAdapter extends BaseAdapter{
 		tvDesc.setText(poi.getAlamat());
 		
 		TextView tvJarak = (TextView) convertView.findViewById(R.id.tvJarak);
-//		double jarak = Utilities.RoundDecimal(poi.getJarak(), 2);
-		tvJarak.setText(""+ poi.getJarak() + " Km");
+		double jarak = Utilities.RoundDecimal(poi.getJarak(), 2);
+		tvJarak.setText(""+ jarak + " Km");
 		return convertView;
 	}
 
