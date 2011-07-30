@@ -69,6 +69,16 @@ public class TangerangMapsMain extends GDActivity implements GPSCallback{ //, GP
 //		bestProvider = locationManager.getBestProvider(criteria, false);
 //		location = locationManager.getLastKnownLocation(bestProvider);
 //		
+//		addActionBarItem(Type.LocateMyself, R.id.action_bar_nearby);
+//		addActionBarItem(Type.Search,R.id.action_bar_search);
+		
+//		locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+//		List<String> listProviders = locationManager.getAllProviders();
+//		
+//		Criteria criteria = new Criteria();
+//		bestProvider = locationManager.getBestProvider(criteria, false);
+//		location = locationManager.getLastKnownLocation(bestProvider);
+//		
 		addActionBarItem(Type.LocateMyself, R.id.action_bar_nearby);
 		addActionBarItem(Type.Search,R.id.action_bar_search);
 		
@@ -87,7 +97,7 @@ public class TangerangMapsMain extends GDActivity implements GPSCallback{ //, GP
 			break;
 			
 		case R.id.btnPoi:
-			i = new Intent(this, Categories.class);
+			i = new Intent(this, PointofInterest.class);
 			startActivity(i);
 			break;
 		
