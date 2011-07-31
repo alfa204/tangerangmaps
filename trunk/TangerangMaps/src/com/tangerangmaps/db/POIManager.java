@@ -154,7 +154,7 @@ public class POIManager extends ContextWrapper{
 			poi.setNama(c.getString(c.getColumnIndex(nama)));
 			poi.setTelp(c.getString(c.getColumnIndex(telp)));
 			poi.setWebsite(c.getString(c.getColumnIndex(website)));
-			
+			poi.setIdKategori(c.getString(c.getColumnIndex(idKategori)));
 			double latP = Double.parseDouble(poi.getLat());
 			double lonP = Double.parseDouble(poi.getLon());
 			double jarak = Utilities.getDistanceBetweenTwoLocation(
@@ -167,6 +167,51 @@ public class POIManager extends ContextWrapper{
 		c = null;
 		
 		return pois;
+	}
+	
+	public List<PoiLokasi> getNearPoi(){
+		List<PoiLokasi> pois = new ArrayList<PoiLokasi>();
+		prefLocation = getSharedPreferences("tm", 0);
+		double latUser = Double.parseDouble(prefLocation.getString("userLat", "0"));
+		double lonUser = Double.parseDouble(prefLocation.getString("userLon", "0"));
+		
+		String query = "select * from lokasi";
+		Cursor c = myDB.rawQuery(query, null);
+		
+		while(c.moveToNext()){
+			PoiLokasi poi = new PoiLokasi();
+			poi.setLat(c.getString(c.getColumnIndex(lat)));
+			poi.setLon(c.getString(c.getColumnIndex(lon)));
+			double latP = Double.parseDouble(poi.getLat());
+			double lonP = Double.parseDouble(poi.getLon());
+			double jarak = Utilities.getDistanceBetweenTwoLocation(
+					latUser, lonUser, latP, lonP);
+			jarak = Utilities.RoundDecimal(jarak, 2);
+			
+			//Untuk mengecek Poi yang radius 3KM
+			if (jarak<=3) {
+				poi.setAlamat(c.getString(c.getColumnIndex(alamat)));
+				poi.setEmail(c.getString(c.getColumnIndex(email)));
+				poi.setFax(c.getString(c.getColumnIndex(fax)));
+				poi.setImageUrl(c.getString(c.getColumnIndex(imageUrl)));
+				poi.setKeterangan(c.getString(c.getColumnIndex(keterangan)));
+				poi.setKontribEMail(c.getString(c.getColumnIndex(kontribEmail)));
+				poi.setKontribName(c.getString(c.getColumnIndex(kontribName)));
+				poi.setNama(c.getString(c.getColumnIndex(nama)));
+				poi.setIdKategori(c.getString(c.getColumnIndex(idKategori)));
+				poi.setTelp(c.getString(c.getColumnIndex(telp)));
+				poi.setWebsite(c.getString(c.getColumnIndex(website)));
+				poi.setJarak(jarak);
+				pois.add(poi);
+			}
+			
+		}
+		c.close();
+		c = null;
+		
+		
+		return pois;
+		
 	}
 	public void close() {
 		myDB.close();

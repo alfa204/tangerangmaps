@@ -16,6 +16,8 @@ import android.widget.TextView;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;
 import com.tangerangmaps.R;
+import com.tangerangmaps.object.PoiLokasi;
+import com.tangerangmaps.ui.InfoPoiDetail;
 import com.tangerangmaps.util.MapRoute;
 
 public class MapOverlay extends ItemizedOverlay{
@@ -23,6 +25,7 @@ public class MapOverlay extends ItemizedOverlay{
 	private ArrayList<OverlayItem> mOverlays = new ArrayList<OverlayItem>();
 	private Context mContext;
 	private Activity mActivity;
+	PoiLokasi poi;
 	
 	String routingMethod, sLat, sLon;
 		
@@ -32,14 +35,23 @@ public class MapOverlay extends ItemizedOverlay{
 	}
 
 	public MapOverlay(Drawable defaultMarker, Context context,
+			PoiLokasi poiSend) {
+        this(defaultMarker);
+        mContext = context;
+        mActivity = (Activity) context;
+        poi = poiSend;
+        sLat = poi.getLat();
+        sLon = poi.getLon();
+    }	
+
+	public MapOverlay(Drawable defaultMarker, Context context,
 			String lat, String lon) {
         this(defaultMarker);
         mContext = context;
         mActivity = (Activity) context;
         sLat = lat;
         sLon = lon;
-    }	
-
+    }
 	public void addOverlay(OverlayItem overlay) {
 	    mOverlays.add(overlay);
 	    populate();
@@ -71,24 +83,29 @@ public class MapOverlay extends ItemizedOverlay{
 		 TextView text = (TextView) dialog.findViewById(R.id.tvText);
 		 text.setText(item.getSnippet());
 		 
-		 layout.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Thread t = new Thread(){
-					public void run(){
-						Intent intent=new Intent(mContext,MapRoute.class);
-		                intent.putExtra("method", routingMethod);
-		                intent.putExtra("latitude", sLat);
-		                intent.putExtra("longitude", sLon);
-		                mActivity.startActivityForResult(intent, 2);
-		                
-		                dialog.dismiss();
+		 if (poi!= null) {
+			 layout.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						Thread t = new Thread(){
+							public void run(){
+//								Intent intent=new Intent(mContext,MapRoute.class);
+//				                intent.putExtra("method", routingMethod);
+//				                intent.putExtra("latitude", sLat);
+//				                intent.putExtra("longitude", sLon);
+								Intent i = new Intent(mContext, InfoPoiDetail.class);
+								i.putExtra("poi", poi);
+				                mActivity.startActivityForResult(i, 2);
+				                
+				                dialog.dismiss();
+							}
+						};
+						t.start();
 					}
-				};
-				t.start();
-			}
-		});
+				});
+		}
+		 
 		 dialog.show();
 		return true;
 	}
