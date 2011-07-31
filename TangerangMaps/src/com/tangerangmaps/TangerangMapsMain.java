@@ -38,13 +38,14 @@ import greendroid.app.GDActivity;
 import greendroid.widget.ActionBarItem;
 import greendroid.widget.ActionBarItem.Type;
 
-public class TangerangMapsMain extends GDActivity implements GPSCallback{ //, GPSCallback
+public class TangerangMapsMain extends GDActivity { //, GPSCallback
 	
 	private GPSManager gpsManager = null;
 	private double userLon = 0;
 	private double userLat = 0;
 	SharedPreferences prefLocation;
 	private LocationManager locationManager;
+	private LocationListener locationListener;
 //	private Location location;
 	private String bestProvider;
 //	TextView tv;
@@ -57,10 +58,12 @@ public class TangerangMapsMain extends GDActivity implements GPSCallback{ //, GP
 		setTitleColor(R.color.lightblack);
 //		tv = (TextView) findViewById(R.id.alamat);
 		
+		initLocationManager();
 		
-		gpsManager = new GPSManager();
-		gpsManager.startListening(this);
-		gpsManager.setGPSCallback(this);
+		
+//		gpsManager = new GPSManager();
+//		gpsManager.startListening(this);
+//		gpsManager.setGPSCallback(this);
 //		
 //		locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 //		List<String> listProviders = locationManager.getAllProviders();
@@ -81,6 +84,55 @@ public class TangerangMapsMain extends GDActivity implements GPSCallback{ //, GP
 //		
 		addActionBarItem(Type.LocateMyself, R.id.action_bar_nearby);
 		addActionBarItem(Type.Search,R.id.action_bar_search);
+		
+	}
+	
+	/*
+	 * Untuk inisialisasi locationmanager
+	 */
+	private void initLocationManager(){
+		locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+		List<String> listProviders = locationManager.getAllProviders();
+		Criteria criteria = new Criteria();
+		criteria.setAccuracy(Criteria.ACCURACY_FINE);
+		criteria.setAltitudeRequired(true);
+		criteria.setBearingRequired(false);
+		criteria.setCostAllowed(true);
+		criteria.setPowerRequirement(Criteria.POWER_LOW);
+		bestProvider = locationManager.getBestProvider(criteria, false);
+//		location = locationManager.getLastKnownLocation(bestProvider);
+		
+		
+			locationListener = new LocationListener() {
+				
+				@Override
+				public void onStatusChanged(String provider, int status, Bundle extras) {
+					// TODO Auto-generated method stub
+				}
+				
+				@Override
+				public void onProviderEnabled(String provider) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void onProviderDisabled(String provider) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void onLocationChanged(Location location) {
+					// TODO Auto-generated method stub
+					getUserLocation(location);
+				}
+			};
+		if(bestProvider.equalsIgnoreCase(LocationManager.GPS_PROVIDER)){	
+			locationManager.requestLocationUpdates(bestProvider, 0, 1000, locationListener);
+		}else{
+			locationManager.requestLocationUpdates(bestProvider, 0, 0, locationListener);
+		}
 		
 	}
 	
@@ -108,11 +160,6 @@ public class TangerangMapsMain extends GDActivity implements GPSCallback{ //, GP
 		}
 	}
 	
-	@Override
-	public void onGPSUpdate(Location location) {
-		// TODO Auto-generated method stub
-		getUserLocation(location);
-	}
 	
 	public void getUserLocation(Location location){
 		userLat = location.getLatitude();
@@ -131,11 +178,12 @@ public class TangerangMapsMain extends GDActivity implements GPSCallback{ //, GP
 
 	@Override
 	protected void onDestroy() {
-		gpsManager.stopListening();
-		gpsManager.setGPSCallback(null);
+//		gpsManager.stopListening();
+//		gpsManager.setGPSCallback(null);
+//		
+//		gpsManager = null;
 		
-		gpsManager = null;
-		
+		locationManager = null;
 		super.onDestroy();
 	}
 
@@ -203,4 +251,5 @@ public class TangerangMapsMain extends GDActivity implements GPSCallback{ //, GP
 		}
     	return false;
     }
+
 }
