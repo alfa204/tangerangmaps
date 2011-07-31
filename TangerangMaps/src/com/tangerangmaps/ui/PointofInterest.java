@@ -25,7 +25,7 @@ public class PointofInterest extends GDActivity{
 		setActionBarContentView(R.layout.pointofinterest);
 		setTitle("Point of Interest");
 		ctx = this;
-		new PoiSync().execute();
+//		new PoiSync().execute();
 	}
 	
 	public void btnEvent(View v){

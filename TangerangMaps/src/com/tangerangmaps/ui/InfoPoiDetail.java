@@ -47,8 +47,12 @@ public class InfoPoiDetail extends GDTabActivity{
 		bar.setTitle(poi.getNama());
 		
 //		addActionBarItem(Type.Direction, R.id.action_bar_direction);
-		
+		addActionBarItem(getActionBar()
+				.newActionBarItem(NormalActionBarItem.class)
+				.setDrawable(android.R.drawable.ic_menu_directions)
+				.setContentDescription("Direction"), R.id.action_bar_direction);
 		Intent i = new Intent(this, InfoPoiDetailInformation.class);
+		i.putExtra("poi", poi);
 		addTab(TAB1, "Information", i);
 		
 		picture = (ImageView) findViewById(R.id.imgIconDetail);

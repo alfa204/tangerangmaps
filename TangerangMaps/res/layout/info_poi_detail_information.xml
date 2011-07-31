@@ -12,7 +12,7 @@
         	android:orientation="vertical"
         	android:layout_width="fill_parent"
         	android:layout_height="wrap_content">
-<TextView 
+<!-- <TextView 
 	android:text="Nama" 
 	android:id="@+id/tvDetailNama" 
 	android:textSize="16sp"
@@ -22,14 +22,16 @@
 	android:layout_height="wrap_content" 
 	android:layout_toRightOf="@+id/imgIcon"
 	android:layout_marginTop="5dip"
-	android:gravity="center"/><TextView 
+	android:gravity="center"/>
+	-->
+	<TextView 
 	android:id="@+id/tvTitle" 
  	android:textColor="@color/foreground1" 
  	android:layout_width="fill_parent"
 	android:layout_height="wrap_content" 
 	android:layout_marginTop="5dip"
 	android:gravity="left"/>
-
+ 
 <TextView 
 	android:text="Alamat :" 
 	android:id="@+id/tvDetailAlamatTitle" 
@@ -40,7 +42,8 @@
 	android:layout_height="wrap_content" 
 	android:layout_toRightOf="@+id/imgIcon"
 	android:layout_marginTop="5dip"
-	android:gravity="left"/><TextView 
+	android:gravity="left"/>
+	<TextView 
 	android:text="-" 
 	android:id="@+id/tvDetailAlamat"
  	android:layout_below="@id/tvTitle" 
@@ -57,7 +60,8 @@
  	android:layout_width="fill_parent"
 	android:layout_height="wrap_content" 
 	android:layout_marginTop="5dip"
-	android:gravity="left"/><TextView 
+	android:gravity="left"/>
+	<TextView 
 	android:text="Telepon :" 
 	android:id="@+id/tvDetailTeleponTitle" 
 	android:textSize="12sp"
@@ -74,11 +78,13 @@
 	android:id="@+id/tvDetailTelepon"
  	android:layout_below="@id/tvTitle" 
  	android:layout_height="wrap_content"
- 	android:textSize="12sp" 
+ 	android:textSize="12sp"
  	android:textColor="@color/textcolor" 
  	android:layout_width="fill_parent"
 	android:layout_toRightOf="@+id/imgIcon" 
- 	android:gravity="left"/><TextView 
+ 	android:gravity="left"/>
+ 	
+ 	<TextView 
 	android:id="@+id/tvTitle" 
  	android:textColor="@color/foreground1" 
  	android:layout_width="fill_parent"
@@ -96,7 +102,8 @@
 	android:layout_height="wrap_content" 
 	android:layout_toRightOf="@+id/imgIcon"
 	android:layout_marginTop="5dip"
-	android:gravity="left"/><TextView 
+	android:gravity="left"/>
+	<TextView 
 	android:text="-" 
 	android:id="@+id/tvDetailFax"
  	android:layout_below="@id/tvTitle" 
@@ -113,7 +120,9 @@
  	android:layout_width="fill_parent"
 	android:layout_height="wrap_content" 
 	android:layout_marginTop="5dip"
-	android:gravity="left"/><TextView 
+	android:gravity="left"/>
+	
+	<TextView 
 	android:text="Email :" 
 	android:id="@+id/tvDetailEmailTitle" 
 	android:textSize="12sp"
@@ -134,7 +143,9 @@
  	android:textColor="@color/textcolor" 
  	android:layout_width="fill_parent"
 	android:layout_toRightOf="@+id/imgIcon" 
- 	android:gravity="left"/><TextView 
+ 	android:gravity="left"/>
+ 	
+ 	<TextView 
 	android:id="@+id/tvTitle" 
  	android:textColor="@color/foreground1" 
  	android:layout_width="fill_parent"
@@ -169,7 +180,8 @@
  	android:layout_width="fill_parent"
 	android:layout_height="wrap_content" 
 	android:layout_marginTop="5dip"
-	android:gravity="left"/><TextView 
+	android:gravity="left"/>
+	<TextView 
 	android:text="Keterangan :" 
 	android:id="@+id/tvDetailKetTitle" 
 	android:textSize="12sp"

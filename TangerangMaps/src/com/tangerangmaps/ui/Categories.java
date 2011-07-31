@@ -51,7 +51,7 @@ public class Categories extends GDActivity{
     	addActionBarItem(Type.LocateMyself, R.id.action_bar_nearby);
 		addActionBarItem(Type.Search,R.id.action_bar_search);
 		ctx = this;
-		new PoiSync().execute();
+//		new PoiSync().execute();
 		
     	pageItems = new ArrayList<PageItem>();
     	
@@ -77,14 +77,14 @@ public class Categories extends GDActivity{
     	ButtonItem btn222 = new ButtonItem(R.string.sport, R.drawable.btn_sport);
     	ButtonItem btn231 = new ButtonItem(R.string.travel, R.drawable.btn_travel);
     	ButtonItem btn232 = new ButtonItem(R.string.entertaiment, R.drawable.btn_entertaiment);
-//    	PageItem item3 = new PageItem();
-    	PageItem item3 = new PageItem(btn211, btn212, btn221, btn222, btn231, btn232);
+    	PageItem item3 = new PageItem(btn211,btn212,btn221,btn222,btn231,btn232);
+//    	PageItem item3 = new PageItem(btn211, btn212, btn221, btn222, btn231, btn232);
 //    	item3.setBtnR1C1(btn211);
 //    	item3.setBtnR1C2(btn212);
     	
     	pageItems.add(item);
     	pageItems.add(item2);
-    	pageItems.add(item3);
+//    	pageItems.add(item3);
     	
     	PageViewAdapter adapter = new PageViewAdapter(this, pageItems);
     	
