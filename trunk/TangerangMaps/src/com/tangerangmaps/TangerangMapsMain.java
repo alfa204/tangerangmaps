@@ -82,8 +82,8 @@ public class TangerangMapsMain extends GDActivity { //, GPSCallback
 //		bestProvider = locationManager.getBestProvider(criteria, false);
 //		location = locationManager.getLastKnownLocation(bestProvider);
 //		
-		addActionBarItem(Type.LocateMyself, R.id.action_bar_nearby);
-		addActionBarItem(Type.Search,R.id.action_bar_search);
+//		addActionBarItem(Type.LocateMyself, R.id.action_bar_nearby);
+//		addActionBarItem(Type.Search,R.id.action_bar_search);
 		
 	}
 	

@@ -1,6 +1,9 @@
 package com.tangerangmaps.ui;
 
+import com.cyrilmottier.android.greendroid.R.color;
 import com.tangerangmaps.R;
+import com.tangerangmaps.TangerangMaps;
+import com.tangerangmaps.TangerangMapsMain;
 import com.tangerangmaps.object.PoiLokasi;
 import com.tangerangmaps.util.ImageLoader;
 import com.tangerangmaps.util.MapRoute;
@@ -49,7 +52,7 @@ public class InfoPoiDetail extends GDTabActivity{
 //		addActionBarItem(Type.Direction, R.id.action_bar_direction);
 		addActionBarItem(getActionBar()
 				.newActionBarItem(NormalActionBarItem.class)
-				.setDrawable(android.R.drawable.ic_menu_directions)
+				.setDrawable(com.tangerangmaps.R.drawable.ic_menu_directions)
 				.setContentDescription("Direction"), R.id.action_bar_direction);
 		Intent i = new Intent(this, InfoPoiDetailInformation.class);
 		i.putExtra("poi", poi);

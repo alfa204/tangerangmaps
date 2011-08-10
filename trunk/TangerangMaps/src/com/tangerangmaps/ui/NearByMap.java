@@ -18,7 +18,7 @@ import com.google.android.maps.Overlay;
 import com.google.android.maps.OverlayItem;
 import com.tangerangmaps.MapOverlay;
 import com.tangerangmaps.R;
-import com.tangerangmaps.adapter.SingleOverlayItem;
+import com.tangerangmaps.adapter.CustomOverlayItem;
 import com.tangerangmaps.db.POIManager;
 import com.tangerangmaps.object.PoiLokasi;
 
